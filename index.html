@@ -10,7 +10,7 @@
             padding: 0;
             height: 100vh;
             font-family: Arial, sans-serif;
-            background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background: #202020;
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -38,7 +38,7 @@
             white-space: pre-wrap;
         }
         .copy-btn {
-            background-color: #4CAF50;
+            background-color: #303030;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -47,7 +47,7 @@
             font-size: 16px;
         }
         .copy-btn:hover {
-            background-color: #45a049;
+            background-color: #353535;
         }
     </style>
 </head>
@@ -55,9 +55,7 @@
     <div class="container">
         <h1>Banana Hub 🍌</h1>
         <h2>The best free & keyless & OP script for Roblox.</h2>
-        <div class="script-box" id="scriptText">
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/novalitic/Banana-Hub-PS99-Script-OP/main/BananaHub.lua", true))()
-        </div>
+        <div class="script-box" id="scriptText">loadstring(game:HttpGet("https://raw.githubusercontent.com/novalitic/Banana-Hub-PS99-Script-OP/main/BananaHub.lua", true))()</div>
         <button class="copy-btn" onclick="copyText()">Copy Script</button>
     </div>
 
@@ -65,9 +63,9 @@
         function copyText() {
             const scriptText = document.getElementById("scriptText").innerText;
             navigator.clipboard.writeText(scriptText).then(() => {
-                alert("Text copied to clipboard!");
+                alert("Script has been copied to clipboard!");
             }).catch(err => {
-                alert("Failed to copy text: " + err);
+                alert("Failed to copy script: " + err);
             });
         }
     </script>
